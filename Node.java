@@ -14,4 +14,20 @@ public class Node {
     public void addChild(Node child) {
         this.children.add(child);
     }
+
+    //TODO: 매소드 hasChild(), height(), dfs(), bfs() 구현
+
+    public boolean hasChild() {
+        return !this.children.isEmpty();
+    }
+
+    public int height() {
+        int max_height = 1;
+        for (Node child : this.children) {
+            if (max_height <= child.height()) {
+                max_height += child.height();
+            }
+        }
+        return max_height;
+    }
 }

@@ -13,5 +13,11 @@ public class Example {
         for (Node child : root.children) {
             System.out.println("- " + child.label);
         }
+        System.out.println("Root has child: " + root.hasChild());
+        System.out.println("Children have child:");
+        for (Node child : root.children) {
+            System.out.println("- " + child.label + " has child: " + child.hasChild());
+        }
+        System.out.println("Root height: " + root.height());
     }
 }

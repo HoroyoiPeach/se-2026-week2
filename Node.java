@@ -21,14 +21,13 @@ public class Node {
         return !this.children.isEmpty();
     }
 
+    // 가장 높은 자식의 높이에 현재 노드의 높이 1을 더한다.
     public int height() {
-        int max_height = 1;
+        int maxHeight = 0;
         for (Node child : this.children) {
-            if (max_height <= child.height()) {
-                max_height += child.height();
-            }
+            maxHeight = Math.max(maxHeight, child.height());
         }
-        return max_height;
+        return maxHeight + 1;
     }
 
     public void dfs() {

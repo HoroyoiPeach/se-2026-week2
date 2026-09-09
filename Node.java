@@ -30,4 +30,22 @@ public class Node {
         }
         return max_height;
     }
+
+    public void dfs() {
+        System.out.println(this.label);
+        for (Node child : this.children) {
+            child.dfs();
+        }
+    }
+
+    public void bfs() {
+        List<Node> queue = new ArrayList<>();
+        queue.add(this);
+        while (!queue.isEmpty()) {
+            Node current = queue.remove(0);
+            System.out.println(current.label);
+            queue.addAll(current.children);
+        }
+    }
+    
 }

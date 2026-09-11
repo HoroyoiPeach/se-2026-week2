@@ -10,7 +10,7 @@ public class Example {
         root.addChild(child1);
         root.addChild(child2);
         child1.addChild(grandchild1);
-        child2.addChild(grandchild2);
+        child1.addChild(grandchild2);
 
         System.out.println("Root label: " + root.label);
         System.out.println("Children of Root:");
